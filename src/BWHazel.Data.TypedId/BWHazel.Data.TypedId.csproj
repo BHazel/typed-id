@@ -3,11 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Title>Typed ID</Title>
-	<Description>Strongly-typed IDs for your entities!</Description>
+	  <Description>Strongly-typed IDs for your entities!</Description>
     <PackageId>BWHazel.TypedId</PackageId>
-	<PackageReadmeFile>../README.md</PackageReadmeFile>
-	<Authors>Benedict W. Hazel</Authors>
-	<Product>Typed ID</Product>
+	  <Authors>Benedict W. Hazel</Authors>
+	  <Product>Typed ID</Product>
     <Version>1.0.0</Version>
     <RootNamespace>BWHazel.Data</RootNamespace>
     <Nullable>enable</Nullable>
