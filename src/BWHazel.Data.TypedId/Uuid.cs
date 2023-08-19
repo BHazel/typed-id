@@ -5,7 +5,7 @@ namespace BWHazel.Data;
 /// <summary>
 /// A typed-ID with an underlying ID of a UUID type.
 /// </summary>
-/// <remarks>The underlying type is <see cref="System.Guid"/>.s</remarks>
+/// <remarks>The underlying type is <see cref="Guid"/>.s</remarks>
 public struct Uuid<T> : IId<T, Guid>
 {
     private static readonly Func<Guid> factory = Guid.NewGuid;
@@ -39,15 +39,15 @@ public struct Uuid<T> : IId<T, Guid>
     public static Uuid<T> NewId() => new Uuid<T>(factory());
 
     /// <summary>
-    /// 
+    /// Implicitly converts a <see cref="Uuid{T}"/> instance to the underlying ID type.
     /// </summary>
-    /// <param name="typedId"></param>
+    /// <param name="typedId">The ID value.</param>
     public static implicit operator Guid(Uuid<T> typedId) => typedId.Value;
 
     /// <summary>
-    /// 
+    /// Implcitly converts an underlying ID type to a <see cref="Uuid{T}"/>.
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="id">A <see cref="Uuid{T}"/>.</param>
     public static implicit operator Uuid<T>(Guid id) => new(id);
 
     /// <summary>

@@ -5,7 +5,7 @@ using Xunit;
 namespace BWHazel.Data.Tests;
 
 /// <summary>
-/// Tests the <see cref="BWHazel.Data.Uuid{T}"/> struct.
+/// Tests the <see cref="Uuid{T}"/> struct.
 /// </summary>
 public class UuidTests
 {
