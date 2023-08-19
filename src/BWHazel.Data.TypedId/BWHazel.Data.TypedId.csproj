@@ -5,6 +5,7 @@
     <Title>Typed ID</Title>
 	<Description>Strongly-typed IDs for your entities!</Description>
     <PackageId>BWHazel.TypedId</PackageId>
+	<PackageReadmeFile>../README.md</PackageReadmeFile>
 	<Authors>Benedict W. Hazel</Authors>
 	<Product>Typed ID</Product>
     <Version>1.0.0</Version>
