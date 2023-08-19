@@ -2,7 +2,7 @@
 
 A library for strongly-typed IDs for your entities!
 
-## Introduction
+## Motivation
 
 IDs provide a unique identifier for entity objects and are often based on GUIDs or integers, e.g.
 
@@ -62,3 +62,11 @@ Currently the library supports the following ID types:
 |-|-|
 | GUID | `Uuid<T>` |
 | Integer | `IntId<T>` |
+
+## Installation
+
+Typed ID can be installed from NuGet:
+
+```sh
+dotnet add package BWHazel.TypedId
+```
