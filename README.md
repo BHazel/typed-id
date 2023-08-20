@@ -2,6 +2,8 @@
 
 A library for strongly-typed IDs for your entities!
 
+For examples please see the **Using Typed IDs** section below.
+
 ## Motivation
 
 IDs provide a unique identifier for entity objects and are often based on GUIDs or integers, e.g.
@@ -54,14 +56,16 @@ public bool IsAddressFor(Uuid<Person> personId, Uuid<Address> addressId) { }
 
 So, if the person and address IDs were confused and passed into the method incorrectly, compiler error!
 
+Additionally, each type can be implicitly interconverted between the underlying ID type.
+
 ## Supported Types
 
 Currently the library supports the following ID types:
 
 | ID Type | Typed ID |
 |-|-|
-| GUID | `Uuid<T>` |
-| Integer | `IntId<T>` |
+| [GUID](docs/uuid.md) | `Uuid<T>` |
+| [Integer](docs/intid.md) | `IntId<T>` |
 
 ## Installation
 
