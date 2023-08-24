@@ -3,13 +3,21 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Title>Typed ID</Title>
-	  <Description>Strongly-typed IDs for your entities!</Description>
-    <PackageId>BWHazel.TypedId</PackageId>
-	  <Authors>Benedict W. Hazel</Authors>
-	  <Product>Typed ID</Product>
+    <Description>Strongly-typed IDs for your entities!</Description>
+    <Authors>Benedict W. Hazel</Authors>
+    <Product>Typed ID</Product>
     <Version>1.0.0</Version>
+    <PackageId>BWHazel.TypedId</PackageId>
+    <RepositoryUrl>https://github.com/BHazel/typed-id</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © Benedict W. Hazel, 2023</Copyright>
     <RootNamespace>BWHazel.Data</RootNamespace>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
