@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.EntityFrameworkCore", "src\BWHazel.Data.TypedId.EntityFrameworkCore\BWHazel.Data.TypedId.EntityFrameworkCore.csproj", "{7B405CF6-BE4A-4288-834F-20D63E77E6C7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{823A9E40-92B6-4FA8-9C99-E21805DBAACB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5E107432-2229-4C9E-8F45-112E4ECA3FCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4417F0E-49D7-4CCE-ABF4-C1947F332565} = {823A9E40-92B6-4FA8-9C99-E21805DBAACB}
+		{090622BC-5A70-473D-B409-33E8339D168F} = {5E107432-2229-4C9E-8F45-112E4ECA3FCE}
+		{7B405CF6-BE4A-4288-834F-20D63E77E6C7} = {823A9E40-92B6-4FA8-9C99-E21805DBAACB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3650A60-B032-43CD-B972-69317C41C2C9}
