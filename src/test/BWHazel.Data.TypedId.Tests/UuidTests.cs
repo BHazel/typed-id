@@ -12,7 +12,7 @@ public class UuidTests
     [Fact]
     public void EmptyConstructor_ShouldGenerateUuidWithInitialisedGuid()
     {
-        Uuid<TestEntity> id = new Uuid<TestEntity>();
+        Uuid<TestEntity> id = new();
 
         id.Value.ShouldNotBe(Guid.Empty);
     }
@@ -22,7 +22,7 @@ public class UuidTests
     {
         Guid guid = Guid.NewGuid();
 
-        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id = new(guid);
 
         id.Value.ShouldBe(guid);
     }
@@ -59,8 +59,8 @@ public class UuidTests
     public void EqualityOperator_ShouldReturnTrue_WhenGivenTwoUuidsWithSameId()
     {
         Guid guid = Guid.NewGuid();
-        Uuid<TestEntity> id1 = new Uuid<TestEntity>(guid);
-        Uuid<TestEntity> id2 = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id1 = new(guid);
+        Uuid<TestEntity> id2 = new(guid);
 
         bool isEqual = id1 == id2;
 
@@ -74,6 +74,94 @@ public class UuidTests
         Uuid<TestEntity> id2 = Uuid<TestEntity>.NewId();
 
         bool isEqual = id1 == id2;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenUuidAndGuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new(guid);
+
+        bool isEqual = id == guid;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenUuidAndGuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = Uuid<TestEntity>.NewId();
+
+        bool isEqual = id == guid;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenUuidAndGuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = Uuid<TestEntity>.NewId();
+
+        bool isEqual = id != guid;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenUuidAndGuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new(guid);
+
+        bool isEqual = id != guid;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenGuidAndUuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new(guid);
+
+        bool isEqual = guid == id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenGuidAndUuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = Uuid<TestEntity>.NewId();
+
+        bool isEqual = guid == id;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenGuidAndUuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = Uuid<TestEntity>.NewId();
+
+        bool isEqual = guid != id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenGuidAndUuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new(guid);
+
+        bool isEqual = guid != id;
 
         isEqual.ShouldBeFalse();
     }
@@ -93,8 +181,8 @@ public class UuidTests
     public void InequalityOperator_ShouldReturnFalse_WhenGivenTwoUuidsWithSameId()
     {
         Guid guid = Guid.NewGuid();
-        Uuid<TestEntity> id1 = new Uuid<TestEntity>(guid);
-        Uuid<TestEntity> id2 = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id1 = new(guid);
+        Uuid<TestEntity> id2 = new(guid);
 
         bool isEqual = id1 != id2;
 
@@ -105,8 +193,8 @@ public class UuidTests
     public void Equals_ShouldReturnTrue_WhenGivenTwoUuidsWithSameId()
     {
         Guid guid = Guid.NewGuid();
-        Uuid<TestEntity> id1 = new Uuid<TestEntity>(guid);
-        Uuid<TestEntity> id2 = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id1 = new(guid);
+        Uuid<TestEntity> id2 = new(guid);
 
         bool isEqual = id1.Equals(id2);
 
@@ -128,7 +216,7 @@ public class UuidTests
     public void GetHashCode_ShoudlReturnGuidHashCode()
     {
         Guid guid = Guid.NewGuid();
-        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id = new(guid);
 
         int idHashCode = id.GetHashCode();
 
@@ -140,7 +228,7 @@ public class UuidTests
     public void ToString_ShouldReturnGuidString()
     {
         Guid guid = Guid.NewGuid();
-        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+        Uuid<TestEntity> id = new(guid);
 
         string idString = id.ToString();
 
