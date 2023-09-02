@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{823A9E40-92B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5E107432-2229-4C9E-8F45-112E4ECA3FCE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{AA21E32C-8B80-4BBE-8C63-AD5DE5D13AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWHazel.Data.TypedId.Examples.BasicUsage", "examples\BWHazel.Data.TypedId.Examples.BasicUsage\BWHazel.Data.TypedId.Examples.BasicUsage.csproj", "{24A1ADA4-96D1-4699-B685-7A8A9D22098E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{7B405CF6-BE4A-4288-834F-20D63E77E6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B405CF6-BE4A-4288-834F-20D63E77E6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B405CF6-BE4A-4288-834F-20D63E77E6C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A1ADA4-96D1-4699-B685-7A8A9D22098E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A1ADA4-96D1-4699-B685-7A8A9D22098E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A1ADA4-96D1-4699-B685-7A8A9D22098E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A1ADA4-96D1-4699-B685-7A8A9D22098E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 		{C4417F0E-49D7-4CCE-ABF4-C1947F332565} = {823A9E40-92B6-4FA8-9C99-E21805DBAACB}
 		{090622BC-5A70-473D-B409-33E8339D168F} = {5E107432-2229-4C9E-8F45-112E4ECA3FCE}
 		{7B405CF6-BE4A-4288-834F-20D63E77E6C7} = {823A9E40-92B6-4FA8-9C99-E21805DBAACB}
+		{24A1ADA4-96D1-4699-B685-7A8A9D22098E} = {AA21E32C-8B80-4BBE-8C63-AD5DE5D13AF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3650A60-B032-43CD-B972-69317C41C2C9}
