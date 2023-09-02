@@ -10,10 +10,10 @@
  */
 
 // Import the BWHazel.Data namespace where the typed IDs reside.
-using static System.Console;
+using System;
 using BWHazel.Data;
 using BWHazel.Data.TypedId.Examples.BasicUsage;
-using System;
+using static System.Console;
 
 WriteLine("*** TYPED ID EXAMPLE: BASIC USAGE ***");
 
