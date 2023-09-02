@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Title>Typed ID for Entity Framework Core</Title>
+    <Description>Strongly-typed IDs for your entities in Entity Framework Core!</Description>
+    <Authors>Benedict W. Hazel</Authors>
+    <Product>Typed ID for Entity Framework Core</Product>
+    <Version>1.0.0</Version>
+    <PackageId>BWHazel.TypedId.EntityFrameworkCore</PackageId>
+    <RepositoryUrl>https://github.com/BHazel/typed-id</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © Benedict W. Hazel, 2023</Copyright>
+    <RootNamespace>BWHazel.Data</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BWHazel.Data.TypedId\BWHazel.Data.TypedId.csproj" />
+  </ItemGroup>
+
+</Project>
