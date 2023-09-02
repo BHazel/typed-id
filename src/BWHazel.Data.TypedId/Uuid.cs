@@ -36,7 +36,7 @@ public struct Uuid<T> : IId<T, Guid>
     /// Creates a new <see cref="Uuid{T}"/>.
     /// </summary>
     /// <returns>A new <see cref="Uuid{T}"/> with an initialised value.</returns>
-    public static Uuid<T> NewId() => new Uuid<T>(factory());
+    public static Uuid<T> NewId() => new(factory());
 
     /// <summary>
     /// Implicitly converts a <see cref="Uuid{T}"/> instance to the underlying ID type.

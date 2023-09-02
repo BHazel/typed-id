@@ -1,5 +1,9 @@
 ﻿namespace BWHazel.Data;
 
+/// <summary>
+/// A typed-ID with an underlying ID of an integer type.
+/// </summary>
+/// <remarks>The underlying type is <see cref="int"/>.s</remarks>
 public struct IntId<T> : IId<T, int>
 {
     /// <summary>
@@ -17,15 +21,15 @@ public struct IntId<T> : IId<T, int>
     public int Value { get; set; }
 
     /// <summary>
-    /// Implicitly converts a <see cref="Uuid{T}"/> instance to the underlying ID type.
+    /// Implicitly converts a <see cref="IntId{T}"/> instance to the underlying ID type.
     /// </summary>
     /// <param name="typedId">The ID value.</param>
     public static implicit operator int(IntId<T> typedId) => typedId.Value;
 
     /// <summary>
-    /// Implcitly converts an underlying ID type to a <see cref="Uuid{T}"/>.
+    /// Implcitly converts an underlying ID type to a <see cref="IntId{T}"/>.
     /// </summary>
-    /// <param name="id">A <see cref="Uuid{T}"/>.</param>
+    /// <param name="id">A <see cref="IntId{T}"/>.</param>
     public static implicit operator IntId<T>(int id) => new(id);
 
     /// <summary>
