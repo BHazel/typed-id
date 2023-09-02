@@ -67,6 +67,38 @@ public struct Uuid<T> : IId<T, Guid>
     public static bool operator !=(Uuid<T> id1, Uuid<T> id2) => id1.Value != id2.Value;
 
     /// <summary>
+    /// Determines whether a specified <see cref="Uuid{T}"/> and <see cref="Guid"/> instances have the same value.
+    /// </summary>
+    /// <param name="id">The <see cref="Uuid{T}"/> to compare.</param>
+    /// <param name="guid">The <see cref="Guid"/> to compare.</param>
+    /// <returns><c>true</c> if the value of <c>id</c> is the same as the value of <c>guid</c>; otherwise, <c>false</c>.</returns>
+    public static bool operator ==(Uuid<T> id, Guid guid) => id.Value == guid;
+
+    /// <summary>
+    /// Determines whether a specified <see cref="Uuid{T}"/> and <see cref="Guid"/> instances do not have the same value.
+    /// </summary>
+    /// <param name="id">The <see cref="Uuid{T}"/> to compare.</param>
+    /// <param name="guid">The <see cref="Guid"/> to compare.</param>
+    /// <returns><c>true</c> if the value of <c>id</c> is not the same as the value of <c>guid</c>; otherwise, <c>false</c>.</returns>
+    public static bool operator !=(Uuid<T> id, Guid guid) => id.Value != guid;
+
+    /// <summary>
+    /// Determines whether a specified <see cref="Guid"/> and <see cref="Uuid{T}"/> instances have the same value.
+    /// </summary>
+    /// <param name="guid">The <see cref="Guid"/> to compare.</param>
+    /// <param name="id">The <see cref="Uuid{T}"/> to compare.</param>
+    /// <returns><c>true</c> if the value of <c>id</c> is the same as the value of <c>guid</c>; otherwise, <c>false</c>.</returns>
+    public static bool operator ==(Guid guid, Uuid<T> id) => guid == id.Value;
+
+    /// <summary>
+    /// Determines whether a specified <see cref="Guid"/> and <see cref="Uuid{T}"/> instances do not have the same value.
+    /// </summary>
+    /// <param name="guid">The <see cref="Guid"/> to compare.</param>
+    /// <param name="id">The <see cref="Uuid{T}"/> to compare.</param>
+    /// <returns><c>true</c> if the value of <c>id</c> is not the same as the value of <c>guid</c>; otherwise, <c>false</c>.</returns>
+    public static bool operator !=(Guid guid, Uuid<T> id) => guid != id.Value;
+
+    /// <summary>
     /// Indicates whether this instance is equal to a specified object.
     /// </summary>
     /// <param name="obj">The object to compare with the current instance.</param>

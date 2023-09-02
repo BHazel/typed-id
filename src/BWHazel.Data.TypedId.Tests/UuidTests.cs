@@ -79,6 +79,94 @@ public class UuidTests
     }
 
     [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenUuidAndGuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+
+        bool isEqual = id == guid;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenUuidAndGuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(Guid.NewGuid());
+
+        bool isEqual = id == guid;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenUuidAndGuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(Guid.NewGuid());
+
+        bool isEqual = id != guid;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenUuidAndGuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+
+        bool isEqual = id != guid;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenGuidAndUuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+
+        bool isEqual = guid == id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenGuidAndUuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(Guid.NewGuid());
+
+        bool isEqual = guid == id;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenGuidAndUuidWithDifferentValues()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(Guid.NewGuid());
+
+        bool isEqual = guid != id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenGuidAndUuidWithSameValue()
+    {
+        Guid guid = Guid.NewGuid();
+        Uuid<TestEntity> id = new Uuid<TestEntity>(guid);
+
+        bool isEqual = guid != id;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
     public void InequalityOperator_ShouldReturnTrue_WhenGivenTwoUuidsWithDifferentId()
     {
         Uuid<TestEntity> id1 = Uuid<TestEntity>.NewId();
