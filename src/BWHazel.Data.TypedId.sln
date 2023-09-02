@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId", "BWHazel.Data.TypedId\BWHazel.Data.TypedId.csproj", "{C4417F0E-49D7-4CCE-ABF4-C1947F332565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId", "src\BWHazel.Data.TypedId\BWHazel.Data.TypedId.csproj", "{C4417F0E-49D7-4CCE-ABF4-C1947F332565}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.Tests", "BWHazel.Data.TypedId.Tests\BWHazel.Data.TypedId.Tests.csproj", "{090622BC-5A70-473D-B409-33E8339D168F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.Tests", "test\BWHazel.Data.TypedId.Tests\BWHazel.Data.TypedId.Tests.csproj", "{090622BC-5A70-473D-B409-33E8339D168F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWHazel.Data.TypedId.EntityFrameworkCore", "BWHazel.Data.TypedId.EntityFrameworkCore\BWHazel.Data.TypedId.EntityFrameworkCore.csproj", "{7B405CF6-BE4A-4288-834F-20D63E77E6C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.EntityFrameworkCore", "src\BWHazel.Data.TypedId.EntityFrameworkCore\BWHazel.Data.TypedId.EntityFrameworkCore.csproj", "{7B405CF6-BE4A-4288-834F-20D63E77E6C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

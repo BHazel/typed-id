@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BWHazel.Data.TypedId\BWHazel.Data.TypedId.csproj" />
+    <ProjectReference Include="..\..\src\BWHazel.Data.TypedId\BWHazel.Data.TypedId.csproj" />
   </ItemGroup>
 
 </Project>
