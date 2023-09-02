@@ -88,6 +88,94 @@ public class IntIdTests
     }
 
     [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenIntIdAndIntWithSameValue()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(number);
+
+        bool isEqual = id == number;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenIntIdAndIntWithDifferentValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(this.random.Next());
+
+        bool isEqual = id == number;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenIntIdAndIntWithDifferentValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(this.random.Next());
+
+        bool isEqual = id != number;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenIntIdAndIntWithSameValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(number);
+
+        bool isEqual = id != number;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnTrue_WhenGivenIntAndIntIdWithSameValue()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(number);
+
+        bool isEqual = number == id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenIntAndIntIdWithDifferentValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(this.random.Next());
+
+        bool isEqual = number == id;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnTrue_WhenGivenIntAndIntIdWithDifferentValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(this.random.Next());
+
+        bool isEqual = number != id;
+
+        isEqual.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void InequalityOperator_ShouldReturnFalse_WhenGivenIntAndIntIdWithSameValues()
+    {
+        int number = this.random.Next();
+        IntId<TestEntity> id = new IntId<TestEntity>(number);
+
+        bool isEqual = number != id;
+
+        isEqual.ShouldBeFalse();
+    }
+
+    [Fact]
     public void Equals_ShouldReturnTrue_WhenGivenTwoUuidsWithSameId()
     {
         int number = this.random.Next();
