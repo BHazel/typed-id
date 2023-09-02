@@ -6,7 +6,7 @@
     <Description>Strongly-typed IDs for your entities!</Description>
     <Authors>Benedict W. Hazel</Authors>
     <Product>Typed ID</Product>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <PackageId>BWHazel.TypedId</PackageId>
     <RepositoryUrl>https://github.com/BHazel/typed-id</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -17,7 +17,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<None Include="../../README.md" Pack="true" PackagePath="\" />
+		<None Include="../../../README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>
