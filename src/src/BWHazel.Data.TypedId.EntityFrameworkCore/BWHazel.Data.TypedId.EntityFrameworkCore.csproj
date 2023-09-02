@@ -6,7 +6,7 @@
     <Description>Strongly-typed IDs for your entities in Entity Framework Core!</Description>
     <Authors>Benedict W. Hazel</Authors>
     <Product>Typed ID for Entity Framework Core</Product>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <PackageId>BWHazel.TypedId.EntityFrameworkCore</PackageId>
     <RepositoryUrl>https://github.com/BHazel/typed-id</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath="\" />
+    <None Include="../../../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
