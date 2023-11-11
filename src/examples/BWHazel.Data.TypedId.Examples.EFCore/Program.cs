@@ -3,8 +3,8 @@
  * Core, by adding typed IDs to entities and how to register the typed IDs
  * with a database context.
  * 
- * Please see the Person.cs and Address.cs files for examples on how to add
- * typed IDs to entities.
+ * Please see the Person.cs, Address.cs and TelephoneNumber.cs files for
+ * examples on how to add typed IDs to entities.
  */
 
 // Import the BWHazel.Data and Microsoft.EntityFrameworkCore namespaces for
@@ -35,20 +35,30 @@ Address joeBloggsAddress = new()
     PostCode = "ZZ1 4PQ"
 };
 
+// Create a new TelephoneNumber instance using the constructor for StringId<T> for its ID.
+TelephoneNumber joeBloggsTelephoneNumber = new()
+{
+    Id = new("020 1234 5678"),
+    Description = "Home"
+};
+
 // Create a new Person instance using the NewId() method for Uuid<T> for its ID.
 Person joeBloggsPerson = new()
 {
     Id = Uuid<Person>.NewId(),
     Name = "Joe Bloggs",
-    AddressId = joeBloggsAddress.Id
+    AddressId = joeBloggsAddress.Id,
+    TelephoneNumberId = joeBloggsTelephoneNumber.Id
 };
 
 WriteLine($"Person: {joeBloggsPerson}");
 WriteLine($"Address: {joeBloggsAddress}");
+WriteLine($"Telephone Number: {joeBloggsTelephoneNumber}");
 
 WriteLine("* Add Entities to Database *");
 peopleDbContext.Add(joeBloggsPerson);
 peopleDbContext.Add(joeBloggsAddress);
+peopleDbContext.Add(joeBloggsTelephoneNumber);
 await peopleDbContext.SaveChangesAsync();
 
 WriteLine("* Retrieve Entities from Database *");
@@ -60,5 +70,10 @@ Address? joeBloggsAddressFromDatabase = peopleDbContext.Addresses
     .Where(address => address.Id == joeBloggsPerson.AddressId)
     .FirstOrDefault();
 
+TelephoneNumber? joeBloggsTelephoneNumberFromDatabase = peopleDbContext.TelephoneNumbers
+    .Where(telephoneNumber => telephoneNumber.Id == joeBloggsPerson.TelephoneNumberId)
+    .FirstOrDefault();
+
 WriteLine($"Person from Database: {joeBloggsPersonFromDatabase}");
 WriteLine($"Address from Database: {joeBloggsAddressFromDatabase}");
+WriteLine($"Telephone Number from Database: {joeBloggsTelephoneNumberFromDatabase}");
