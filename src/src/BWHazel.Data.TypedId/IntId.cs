@@ -3,6 +3,7 @@
 /// <summary>
 /// A typed-ID with an underlying ID of an integer type.
 /// </summary>
+/// <typeparam name="T">The entity type to associate with the <see cref="IntId{T}"/>.</typeparam
 /// <remarks>The underlying type is <see cref="int"/>.s</remarks>
 public struct IntId<T> : IId<T, int>
 {

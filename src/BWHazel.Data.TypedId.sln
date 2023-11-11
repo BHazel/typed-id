@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5E107432-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{AA21E32C-8B80-4BBE-8C63-AD5DE5D13AF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWHazel.Data.TypedId.Examples.BasicUsage", "examples\BWHazel.Data.TypedId.Examples.BasicUsage\BWHazel.Data.TypedId.Examples.BasicUsage.csproj", "{24A1ADA4-96D1-4699-B685-7A8A9D22098E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.Examples.BasicUsage", "examples\BWHazel.Data.TypedId.Examples.BasicUsage\BWHazel.Data.TypedId.Examples.BasicUsage.csproj", "{24A1ADA4-96D1-4699-B685-7A8A9D22098E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWHazel.Data.TypedId.Examples.EFCore", "examples\BWHazel.Data.TypedId.Examples.EFCore\BWHazel.Data.TypedId.Examples.EFCore.csproj", "{6121C280-8838-42F3-8A15-996B050C5B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWHazel.Data.TypedId.Examples.EFCore", "examples\BWHazel.Data.TypedId.Examples.EFCore\BWHazel.Data.TypedId.Examples.EFCore.csproj", "{6121C280-8838-42F3-8A15-996B050C5B1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

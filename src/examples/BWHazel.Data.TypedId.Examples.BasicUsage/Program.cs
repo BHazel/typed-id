@@ -1,12 +1,13 @@
 ﻿/* TYPED ID EXAMPLE: BASIC USAGE
- * This example demonstrates how to create typed IDs, both UUID and Int ID,
- * how they can interconvert between their underlying ID types and how they
- * provide type safety.
+ * This example demonstrates how to create typed IDs, including UUID, Int ID,
+ * and String ID, how they can interconvert between their underlying ID types
+ * and how they provide type safety.
  * 
- * The example code is split into 3 sections:
+ * The example code is split into 4 sections:
  * 1. UUID Examples
  * 2. Int ID Examples
- * 3. Type Safety
+ * 3. String ID Examples
+ * 4. Type Safety
  */
 
 // Import the BWHazel.Data namespace where the typed IDs reside.
@@ -67,7 +68,7 @@ int intB2 = 10;
 IntId<TestEntityB> idB1 = new IntId<TestEntityB>(intB1);
 IntId<TestEntityB> idB2 = new IntId<TestEntityB>(intB2);
 
-// As with the UUID typed ID, ToString() is overrideden to return the underlying int value.
+// As with the other typed IDs, ToString() is overrideden to return the underlying int value.
 WriteLine(idB1);
 WriteLine(idB2);
 

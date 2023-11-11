@@ -5,6 +5,7 @@ namespace BWHazel.Data;
 /// <summary>
 /// A typed-ID with an underlying ID of a UUID type.
 /// </summary>
+/// <typeparam name="T">The entity type to associate with the <see cref="Uuid{T}"/>.</typeparam>
 /// <remarks>The underlying type is <see cref="Guid"/>.s</remarks>
 public struct Uuid<T> : IId<T, Guid>
 {

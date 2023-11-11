@@ -4,11 +4,11 @@
 
 The typed integer, `IntId<T>`, is a typed ID based on integers.
 
-## Creating Typed UUID IDs
+## Creating Typed Integer IDs
 
 To create integer based IDs:
 
-* Use the parameterised constructor using a specified integer: `new Uuid<T>(5)`.
+* Use the parameterised constructor using a specified integer: `new IntId<T>(5)`.
 
 ## Examples
 

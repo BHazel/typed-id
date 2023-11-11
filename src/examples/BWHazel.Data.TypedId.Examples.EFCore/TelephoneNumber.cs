@@ -11,10 +11,13 @@ public class TelephoneNumber
     /// Gets or sets the ID.
     /// </summary>
     /// <remarks>
+    /// <para>
     /// Ensure when a typed ID is used as a primary key its generic type parameter is the same
     /// as the entity type.
-    /// 
+    /// </para>
+    /// <para>
     /// Additionally, for this example the ID will store the telephone number.
+    /// </para>
     /// </remarks>
     public StringId<TelephoneNumber> Id { get; set; }
 

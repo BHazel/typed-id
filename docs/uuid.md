@@ -2,7 +2,7 @@
 
 > Import the **BWHazel.Data** namespace.
 
-The typed UUID, `Uuid<T>`, is a typed ID based on GUIDs.
+The typed UUID, `Uuid<T>`, is a typed ID based on UUIDs (GUIDs).
 
 ## Creating Typed UUID IDs
 

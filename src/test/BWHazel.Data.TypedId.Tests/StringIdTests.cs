@@ -96,7 +96,7 @@ public class StringIdTests
     }
 
     [Fact]
-    public void EqualityOperator_ShouldReturnFalse_WhenGivenStringIdAndIntWithDifferentValues()
+    public void EqualityOperator_ShouldReturnFalse_WhenGivenStringIdAndStringWithDifferentValues()
     {
         string stringValue = "123";
         StringId<TestEntity> id = new("456");

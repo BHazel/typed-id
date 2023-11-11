@@ -3,6 +3,7 @@
 /// <summary>
 /// A typed-ID with an underlying ID of a string type.
 /// </summary>
+/// <typeparam name="T">The entity type to associate with the <see cref="StringId{T}"/>.</typeparam>
 /// <remarks>The underlying type is <see cref="string"/>.</remarks>
 public struct StringId<T> : IId<T, string>
 {

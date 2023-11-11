@@ -61,7 +61,8 @@ public class PeopleDbContext : DbContext
     /// It is in this method all registrations of typed IDs need to be performed.
     /// <list type="bullet">
     /// <item><see cref="Uuid{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForUuid.IsTypedUuid{T}(PropertyBuilder{Uuid{T}})"/> method.</item>
-    /// <item><see cref="IntId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForIntId.IsTypedUuid{T}(PropertyBuilder{IntId{T}})"/> method.</item>
+    /// <item><see cref="IntId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForIntId.IsTypedIntId{T}(PropertyBuilder{IntId{T}})"/> method.</item>
+    /// <item><see cref="StringId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForStringId.IsTypedStringId{T}(PropertyBuilder{IntId{T}})"/> method.</item>
     /// </list>
     /// </remarks>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
