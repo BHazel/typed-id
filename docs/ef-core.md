@@ -50,3 +50,4 @@ Each of the supported typed IDs has a helper method:
 |-|-|
 | `Uuid<T>` | `IsTypedUuid<T>()` |
 | `IntId<T>` | `IsTypedIntId<T>()` |
+| `StringId<T>` | `IsTypedStringId<T>()` |
