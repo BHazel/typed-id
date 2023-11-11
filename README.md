@@ -49,6 +49,7 @@ Currently the library supports the following ID types, all in the **BWHazel.Data
 |-|-|
 | [GUID](docs/uuid.md) | `Uuid<T>` |
 | [Integer](docs/intid.md) | `IntId<T>` |
+| [String](docs/stringid.md) | `StringId<T>` |
 
 ## Use with Entity Framework Core
 
