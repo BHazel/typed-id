@@ -65,8 +65,8 @@ WriteLine("* Int ID Examples *");
 Random random = new();
 int intB1 = random.Next();
 int intB2 = 10;
-IntId<TestEntityB> idB1 = new IntId<TestEntityB>(intB1);
-IntId<TestEntityB> idB2 = new IntId<TestEntityB>(intB2);
+IntId<TestEntityB> idB1 = new(intB1);
+IntId<TestEntityB> idB2 = new(intB2);
 
 // As with the other typed IDs, ToString() is overrideden to return the underlying int value.
 WriteLine(idB1);
@@ -103,8 +103,8 @@ WriteLine("* String ID Examples *");
 // Create an ID using the constructor with a specified string value.
 string stringC1 = "123";
 string stringC2 = "456";
-StringId<TestEntityA> idC1 = new StringId<TestEntityA>(stringC1);
-StringId<TestEntityA> idC2 = new StringId<TestEntityA>(stringC2);
+StringId<TestEntityA> idC1 = new(stringC1);
+StringId<TestEntityA> idC2 = new(stringC2);
 
 // As with the other typed IDs, ToString() is overrideden to return the underlying string value.
 WriteLine(idC1);

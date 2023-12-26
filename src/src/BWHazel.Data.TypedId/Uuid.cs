@@ -104,17 +104,17 @@ public struct Uuid<T> : IId<T, Guid>
     /// </summary>
     /// <param name="obj">The object to compare with the current instance.</param>
     /// <returns><c>true</c> if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, <c>false</c>.</returns>
-    public override bool Equals(object? obj) => base.Equals(obj);
+    public override readonly bool Equals(object? obj) => base.Equals(obj);
 
     /// <summary>
     /// Returns the hash code for this instance.
     /// </summary>
     /// <returns>The hash code for this instance.</returns>
-    public override int GetHashCode() => this.Value.GetHashCode();
+    public override readonly int GetHashCode() => this.Value.GetHashCode();
 
     /// <summary>
     /// Returns the underlying ID value as a string.
     /// </summary>
     /// <returns>The underlying ID value as a string.</returns>
-    public override string ToString() => this.Value.ToString();
+    public override readonly string ToString() => this.Value.ToString();
 }
