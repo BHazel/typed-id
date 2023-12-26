@@ -31,6 +31,15 @@ public class Person
     public IntId<Address> AddressId { get; set; }
 
     /// <summary>
+    /// Gets or sets the telephone number ID.
+    /// </summary>
+    /// <remarks>
+    /// When using typed IDs for reference keys, ensure the correct type ID and entity type
+    /// parameter are the same as the reference entity.
+    /// </remarks>
+    public StringId<TelephoneNumber> TelephoneNumberId { get; set; }
+
+    /// <summary>
     /// Returns this instance as a JSON string.
     /// </summary>
     /// <returns>This instance as a JSON string.</returns>

@@ -31,6 +31,11 @@ public class PeopleDbContext : DbContext
     public DbSet<Address> Addresses { get; set; }
 
     /// <summary>
+    /// Gets or sets the telephone numbers.
+    /// </summary>
+    public DbSet<TelephoneNumber> TelephoneNumbers { get; set; }
+
+    /// <summary>
     /// Initialises a new instance of the <see cref="PeopleDbContext"/> class.
     /// </summary>
     public PeopleDbContext()
@@ -56,7 +61,8 @@ public class PeopleDbContext : DbContext
     /// It is in this method all registrations of typed IDs need to be performed.
     /// <list type="bullet">
     /// <item><see cref="Uuid{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForUuid.IsTypedUuid{T}(PropertyBuilder{Uuid{T}})"/> method.</item>
-    /// <item><see cref="IntId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForIntId.IsTypedUuid{T}(PropertyBuilder{IntId{T}})"/> method.</item>
+    /// <item><see cref="IntId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForIntId.IsTypedIntId{T}(PropertyBuilder{IntId{T}})"/> method.</item>
+    /// <item><see cref="StringId{T}"/> IDs should be registered using the <see cref="PropertyBuilderExtensionsForStringId.IsTypedStringId{T}(PropertyBuilder{IntId{T}})"/> method.</item>
     /// </list>
     /// </remarks>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -71,9 +77,19 @@ public class PeopleDbContext : DbContext
             .Property(person => person.AddressId)
             .IsTypedIntId();
 
+        // As above, all properties using typed IDs need to be registered.
+        modelBuilder.Entity<Person>()
+            .Property(person => person.TelephoneNumberId)
+            .IsTypedStringId();
+
         // Use the IsTypedIntId() method for a property of type IntId<T>.
         modelBuilder.Entity<Address>()
             .Property(address => address.Id)
             .IsTypedIntId();
+
+        // Use the IsTypedStringId() method for a property of type StringId<T>.
+        modelBuilder.Entity<TelephoneNumber>()
+            .Property(telephoneNumber => telephoneNumber.Id)
+            .IsTypedStringId();
     }
 }

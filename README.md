@@ -49,12 +49,13 @@ Currently the library supports the following ID types, all in the **BWHazel.Data
 |-|-|
 | [GUID](docs/uuid.md) | `Uuid<T>` |
 | [Integer](docs/intid.md) | `IntId<T>` |
+| [String](docs/stringid.md) | `StringId<T>` |
 
 ## Use with Entity Framework Core
 
 > Entity Framework Core support for Typed IDs is available in the **BWHazel.TypedId.EntityFrameworkCore** NuGet package.
 
-To use typed IDs in Entity Framework Core they need to be registered with database context when creating the model in the `DbContext.OnModelCreating()` method.  A helper method is provided to perform the correct mapping to database types for each typed ID in the **Microsoft.EntityFrameworkCoew** namespace.
+To use typed IDs in Entity Framework Core they need to be registered with the database context when creating the model in the `DbContext.OnModelCreating()` method.  A helper method is provided to perform the correct mapping to database types for each typed ID in the **Microsoft.EntityFrameworkCoew** namespace.
 
 Using the example `Person` and `Address` entities above this would look like the following.  Notice that all uses of a typed ID need to be registered.
 
@@ -81,6 +82,7 @@ For each supported typed ID type, the helper methods are:
 |-|-|
 | `Uuid<T>` | `IsTypedUuid<T>()` |
 | `IntId<T>` | `IsTypedIntId<T>()` |
+| `StringId<T>` | `IsTypedStringId<T>()` |
 
 A more generic example can be seen [here](docs/ef-core.md).
 

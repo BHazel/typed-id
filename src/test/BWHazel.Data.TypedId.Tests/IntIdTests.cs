@@ -9,7 +9,7 @@ namespace BWHazel.Data.Tests;
 /// </summary>
 public class IntIdTests
 {
-    private readonly Random random = new Random();
+    private readonly Random random = new();
 
     [Fact]
     public void ParameterisedConstructor_ShouldSetIntIdToProvidedValue()

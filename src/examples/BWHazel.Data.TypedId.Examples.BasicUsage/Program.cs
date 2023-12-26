@@ -1,12 +1,13 @@
 ﻿/* TYPED ID EXAMPLE: BASIC USAGE
- * This example demonstrates how to create typed IDs, both UUID and Int ID,
- * how they can interconvert between their underlying ID types and how they
- * provide type safety.
+ * This example demonstrates how to create typed IDs, including UUID, Int ID,
+ * and String ID, how they can interconvert between their underlying ID types
+ * and how they provide type safety.
  * 
- * The example code is split into 3 sections:
+ * The example code is split into 4 sections:
  * 1. UUID Examples
  * 2. Int ID Examples
- * 3. Type Safety
+ * 3. String ID Examples
+ * 4. Type Safety
  */
 
 // Import the BWHazel.Data namespace where the typed IDs reside.
@@ -64,10 +65,10 @@ WriteLine("* Int ID Examples *");
 Random random = new();
 int intB1 = random.Next();
 int intB2 = 10;
-IntId<TestEntityB> idB1 = new IntId<TestEntityB>(intB1);
-IntId<TestEntityB> idB2 = new IntId<TestEntityB>(intB2);
+IntId<TestEntityB> idB1 = new(intB1);
+IntId<TestEntityB> idB2 = new(intB2);
 
-// As with the UUID typed ID, ToString() is overrideden to return the underlying int value.
+// As with the other typed IDs, ToString() is overrideden to return the underlying int value.
 WriteLine(idB1);
 WriteLine(idB2);
 
@@ -95,6 +96,44 @@ bool idB2DoesNotEqualRandomInt = idB2 != randomInt;
 bool randomIntDoesNotEqualIdB2 = randomInt != idB2;
 WriteLine(idB2DoesNotEqualRandomInt);
 WriteLine(randomIntDoesNotEqualIdB2);
+
+// STRING ID EXAMPLES
+WriteLine("* String ID Examples *");
+
+// Create an ID using the constructor with a specified string value.
+string stringC1 = "123";
+string stringC2 = "456";
+StringId<TestEntityA> idC1 = new(stringC1);
+StringId<TestEntityA> idC2 = new(stringC2);
+
+// As with the other typed IDs, ToString() is overrideden to return the underlying string value.
+WriteLine(idC1);
+WriteLine(idC2);
+
+// Typed IDs and their underlying type can implicitly interconvert.
+string idC1string = idC1;
+StringId<TestEntityA> idC2StringId = stringC2;
+WriteLine(idC1string);
+WriteLine(idC2StringId);
+
+// Typed IDs can be compared using standard equality and inequality operators.
+bool idC1EqualsIdC2 = idC1 == idC2;
+bool idC1DoesNotEqualIdC2 = idC1 != idC2;
+WriteLine(idC1EqualsIdC2);
+WriteLine(idC1DoesNotEqualIdC2);
+
+// Typed IDs and their underlying type can be compared with both equality and inequality operators.
+// Either type can be on either side of the operation.
+bool idC1StringEqualsIdC1 = idC1string == idC1;
+bool idC1EqualsIdC1String = idC1 == idC1string;
+WriteLine(idC1StringEqualsIdC1);
+WriteLine(idC1EqualsIdC1String);
+
+string stringValue = "123";
+bool idC2DoesNotEqualStringValue = idC2 != stringValue;
+bool stringValueDoesNotEqualIdC2 = stringValue != idC2;
+WriteLine(idC2DoesNotEqualStringValue);
+WriteLine(stringValueDoesNotEqualIdC2);
 
 // TYPE SAFETY EXAMPLES
 // Please uncomment the code below to see how typed IDs provide type safety.

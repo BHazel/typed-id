@@ -1,17 +1,17 @@
 ﻿namespace BWHazel.Data;
 
 /// <summary>
-/// A typed-ID with an underlying ID of an integer type.
+/// A typed-ID with an underlying ID of a string type.
 /// </summary>
-/// <typeparam name="T">The entity type to associate with the <see cref="IntId{T}"/>.</typeparam
-/// <remarks>The underlying type is <see cref="int"/>.s</remarks>
-public struct IntId<T> : IId<T, int>
+/// <typeparam name="T">The entity type to associate with the <see cref="StringId{T}"/>.</typeparam>
+/// <remarks>The underlying type is <see cref="string"/>.</remarks>
+public struct StringId<T> : IId<T, string>
 {
     /// <summary>
-    /// Initialises a new instance of the <see cref="IntId{T}"/> struct.
+    /// Initialises a new instance of the <see cref="StringId{T}"/> struct.
     /// </summary>
     /// <param name="id">The underlying ID.</param>
-    public IntId(int id)
+    public StringId(string id)
     {
         this.Value = id;
     }
@@ -19,35 +19,35 @@ public struct IntId<T> : IId<T, int>
     /// <summary>
     /// Gets or sets the ID value.
     /// </summary>
-    public int Value { get; set; }
+    public string Value { get; set; } = string.Empty;
 
     /// <summary>
-    /// Implicitly converts a <see cref="IntId{T}"/> instance to the underlying ID type.
+    /// Implicitly converts a <see cref="StringId{T}"/> instance to the underlying ID type.
     /// </summary>
     /// <param name="typedId">The ID value.</param>
-    public static implicit operator int(IntId<T> typedId) => typedId.Value;
+    public static implicit operator string(StringId<T> typedId) => typedId.Value;
 
     /// <summary>
-    /// Implcitly converts an underlying ID type to a <see cref="IntId{T}"/>.
+    /// Implcitly converts an underlying ID type to a <see cref="StringId{T}"/>.
     /// </summary>
-    /// <param name="id">A <see cref="IntId{T}"/>.</param>
-    public static implicit operator IntId<T>(int id) => new(id);
+    /// <param name="id">A <see cref="StringId{T}"/>.</param>
+    public static implicit operator StringId<T>(string id) => new(id);
 
     /// <summary>
-    /// Determines whether two specified <see cref="IntId{T}"/> instances have the same value.
+    /// Determines whether two specified <see cref="StringId{T}"/> instances have the same value.
     /// </summary>
-    /// <param name="id1">The first <see cref="IntId{T}"/> to compare.</param>
-    /// <param name="id2">The second <see cref="IntId{T}"/> to compare.</param>
+    /// <param name="id1">The first <see cref="StringId{T}"/> to compare.</param>
+    /// <param name="id2">The second <see cref="StringId{T}"/> to compare.</param>
     /// <returns><c>true</c> if the value of <c>id1</c> is the same as the value of <c>id2</c>; otherwise, <c>false</c>.</returns>
-    public static bool operator ==(IntId<T> id1, IntId<T> id2) => id1.Value == id2.Value;
+    public static bool operator ==(StringId<T> id1, StringId<T> id2) => id1.Value == id2.Value;
 
     /// <summary>
-    /// Determines whether two specified <see cref="IntId{T}"/> instances do not have the same value.
+    /// Determines whether two specified <see cref="StringId{T}"/> instances do not have the same value.
     /// </summary>
-    /// <param name="id1">The first <see cref="IntId{T}"/> to compare.</param>
-    /// <param name="id2">The second <see cref="IntId{T}"/> to compare.</param>
+    /// <param name="id1">The first <see cref="StringId{T}"/> to compare.</param>
+    /// <param name="id2">The second <see cref="StringId{T}"/> to compare.</param>
     /// <returns><c>true</c> if the value of <c>id1</c> is not the same as the value of <c>id2</c>; otherwise, <c>false</c>.</returns>
-    public static bool operator !=(IntId<T> id1, IntId<T> id2) => id1.Value != id2.Value;
+    public static bool operator !=(StringId<T> id1, StringId<T> id2) => id1.Value != id2.Value;
 
     /// <summary>
     /// Indicates whether this instance is equal to a specified object.
